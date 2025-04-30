@@ -90,7 +90,7 @@ ZMK_MOD_MORPH(mm_del_num,
             precise {
                     layers = <6>;
                     process-next;
-                    input-processors = <&xy_scaler 1 6>;
+                    input-processors = <&xy_scaler 1 12>;
             };
             scroll {
                     layers = <7>;
