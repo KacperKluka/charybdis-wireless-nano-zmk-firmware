@@ -86,7 +86,7 @@ ZMK_MOD_MORPH(mm_del_num,
     tball1_mmv_il {
             compatible = "zmk,input-listener";
             device = <&trackball>;
-            input-processors = <&zip_zxy>, <&xy_scaler 3 5>;
+            input-processors = <&zip_zxy>, <&xy_scaler 1 5>;
             precise {
                     layers = <6>;
                     process-next;
