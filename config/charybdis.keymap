@@ -96,7 +96,7 @@ ZMK_MOD_MORPH(mm_del_num,
                     layers = <7>;
                     process-next;
                     input-processors = <&xy_transf (INPUT_TRANSFORM_Y_INVERT)>                    
-                                    , <&xzip_xy_to_scroll_mapper>, <&zip_scroll_scaler 0 32>;
+                                    , <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 0 32>;
 
             };
     };
