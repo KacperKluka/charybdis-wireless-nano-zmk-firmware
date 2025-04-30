@@ -83,7 +83,7 @@ ZMK_MOD_MORPH(mm_del_num,
     };
 
 
-    tball1_mmv_il {
+    tball1_il {
             compatible = "zmk,input-listener";
             device = <&trackball>;
             input-processors = <&xy_scaler 1 8 >;
@@ -95,7 +95,9 @@ ZMK_MOD_MORPH(mm_del_num,
             scroll {
                     layers = <7>;
                     process-next;
-                    input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 32>, <&xy_scaler 0 0>;
+                    input-processors = <&xy_transf (INPUT_TRANSFORM_Y_INVERT)>
+                                     , <&xy_scaler 1 32>, <&x_scaler 0 1>
+                                     , <&to_wheel>;
             };
     };
 
