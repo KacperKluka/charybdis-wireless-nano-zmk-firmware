@@ -151,7 +151,7 @@ ZMK_MOD_MORPH(mm_del_num,
 	&trans &trans &trans &trans &trans      &kp EQUAL       &kp NUM_7  &kp NUM_8  &kp NUM_9   &kp MINUS
 	&trans &trans &trans &trans &trans      &kp KP_MULTIPLY &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp PLUS
 	&trans &trans &trans &trans &trans      &kp KP_DIVIDE   &kp NUM_1  &kp NUM_2  &kp NUM_3   &kp DOT
-                      &trans &trans &trans         &trans &NUM_0
+                      &trans &trans &trans         &trans &kp NUM_0
 			>;
 	};
 
