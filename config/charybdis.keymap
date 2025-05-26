@@ -54,11 +54,6 @@ ZMK_MOD_MORPH(mm_rbracket,
     mods = <(MOD_LSFT)>;
 )
 
-ZMK_MOD_MORPH(mm_del_num,
-    bindings = <&lt NAV BSPC>, <&kp DEL>;
-    mods = <(MOD_RSFT)>;
-)
-
 #include "combos.dtsi" // Must be sourced after HRM-combo hack.
 
 
@@ -155,7 +150,7 @@ ZMK_MOD_MORPH(mm_del_num,
    &kp Q       &kp W      &kp E      &kp R      &kp T         &kp Y    &kp U       &kp I      &kp O      &hm RALT P
    &hm LGUI A  &hm LALT S &hm LCTL D &hm LSFT F &kp G         &kp H    &hm RSFT J  &hm RCTL K &hm RALT L &hm RGUI SCLN
    &lt MOUSE Z &kp X      &kp C      &kp V      &kp B         &kp N    &kp M       &kp CMMA   &kp DOT    &lt MOUSE FSLH
-               &lt ADJUST ESC &lt NUM SPC &lt SYM TAB             &lt FUNC RET  &mm_del_num
+               &lt ADJUST ESC &lt NUM SPC &lt SYM TAB             &lt FUNC RET  &lt NAV BSPC
 			>;
 	};
 
