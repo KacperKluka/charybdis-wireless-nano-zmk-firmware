@@ -34,13 +34,23 @@
 #define FUNC  9
 
 
+ZMK_MOD_MORPH(mm_lbracket_brace,
+    bindings = <&kp LBKT>, <&kp LBRC>;
+    mods = <(MOD_LCTL)>;
+)
+
 ZMK_MOD_MORPH(mm_lbracket,
-    bindings = <&kp LPRN>, <&kp LBKT>;
+    bindings = <&kp LPRN>, <&mm_lbracket_brace>;
     mods = <(MOD_LSFT)>;
 )
 
+ZMK_MOD_MORPH(mm_rbracket_brace,
+    bindings = <&kp RBKT>, <&kp RBRC>;
+    mods = <(MOD_LCTL)>;
+)
+
 ZMK_MOD_MORPH(mm_rbracket,
-    bindings = <&kp RPRN>, <&kp RBKT>;
+    bindings = <&kp RPRN>, <&mm_rbracket_brace>;
     mods = <(MOD_LSFT)>;
 )
 
