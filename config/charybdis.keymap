@@ -29,8 +29,9 @@
 #define MOUSE   5
 #define SLOW    6
 #define SCROLL  7
+#define HSCROLL  8
 
-#define FUNC  8
+#define FUNC  9
 
 
 ZMK_MOD_MORPH(mm_lbracket,
@@ -85,7 +86,7 @@ ZMK_MOD_MORPH(mm_del_num,
     tball1_il {
             compatible = "zmk,input-listener";
             device = <&trackball>;
-            input-processors = <&xy_scaler 4 5>;
+            input-processors = <&xy_scaler 3 5>;
             precise {
                     layers = <6>;
                     process-next;
@@ -95,7 +96,14 @@ ZMK_MOD_MORPH(mm_del_num,
                     layers = <7>;
                     process-next;
                     input-processors = <&xy_transf (INPUT_TRANSFORM_Y_INVERT)>
-                                     , <&xy_scaler 1 32>, <&x_scaler 0 1>
+                                     , <&xy_scaler 1 64>, <&x_scaler 0 1>
+                                     , <&to_wheel>;
+            };
+            hscroll {
+                    layers = <8>;
+                    process-next;
+                    input-processors = <&xy_transf (INPUT_TRANSFORM_X_INVERT)>
+                                     , <&xy_scaler 1 64>, <&y_scaler 0 1>
                                      , <&to_wheel>;
             };
     };
@@ -174,9 +182,9 @@ ZMK_MOD_MORPH(mm_del_num,
 
         MOUSE {
             bindings = <
-	&trans &trans     &trans   &trans &trans              &trans &trans &trans   &trans     &trans
-	&trans &trans     &trans   &trans &trans              &trans &trans &trans   &trans     &trans
-	&trans &mo SCROLL &mo SLOW &trans &trans              &trans &trans &mo SLOW &mo SCROLL &trans
+	&trans &trans     &trans   &trans &trans              &trans &trans      &trans   &trans     &trans
+	&trans &trans     &trans   &trans &trans              &trans &trans      &trans   &trans     &trans
+	&trans &mo SCROLL &mo SLOW &mo HSCROLL &trans         &trans &mo HSCROLL &mo SLOW &mo SCROLL &trans
 	            &mkp MB3 &mkp MB1 &mkp MB2       &mkp MB2  &mkp MB1
             >;
         };
@@ -191,6 +199,15 @@ ZMK_MOD_MORPH(mm_del_num,
         };
 
         SCROLL {
+            bindings = <
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans   
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans   
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans  
+                    &trans    &trans    &trans    &trans    &trans
+            >;
+        };
+
+        HSCROLL {
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans   
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans   
