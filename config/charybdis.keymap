@@ -198,10 +198,10 @@ ZMK_MOD_MORPH(mm_del_num,
 
         MOUSE {
             bindings = <
-	&trans   &trans     &trans   &trans &trans              &trans &trans  &trans   &trans     &trans
-	&trans   &trans     &trans   &trans &trans              &trans &trans  &trans   &trans     &trans
-	&HSCROLL &mo SCROLL &mo SLOW &trans &trans       &trans &trans  &mo SLOW &mo SCROLL &HSCROLL
-	            &mkp MB3 &mkp MB1 &mkp MB2       &mkp MB2  &mkp MB1
+	&trans      &trans     &trans   &trans &trans              &trans &trans  &trans   &trans     &trans
+	&trans      &trans     &trans   &trans &trans              &trans &trans  &trans   &trans     &trans
+	&mo HSCROLL &mo SCROLL &mo SLOW &trans &trans              &trans &trans  &mo SLOW &mo SCROLL &mo HSCROLL
+	            &mkp MB3 &mkp MB1 &mkp MB2           &mkp MB2  &mkp MB1
             >;
         };
 
