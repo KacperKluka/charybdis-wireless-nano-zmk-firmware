@@ -152,9 +152,9 @@ ZMK_MOD_MORPH(mm_del_num,
 
 	BASE {
 	    bindings = <
-   &kp Q       &kp W      &kp E      &kp R       &kp T         &kp Y    &kp U       &kp I      &kp O      &hm RALT P
-   &hm LGUI A  &hm LALT S &hm LCTL D &hm LSFT F  &kp G         &kp H    &hm RSFT J  &hm RCTL K &hm RALT L &hm RGUI SCLN
-   &kp Z       &kp X      &kp C      &lt MOUSE V &kp B         &kp N    &lt MOUSE M &kp CMMA   &kp DOT    &kp FSLH
+   &kp Q       &kp W      &kp E       &kp R      &kp T         &kp Y  &kp U      &kp I          &kp O      &hm RALT P
+   &hm LGUI A  &hm LALT S &hm LCTL D  &hm LSFT F &kp G         &kp H  &hm RSFT J &hm RCTL K     &hm RALT L &hm RGUI SCLN
+   &kp Z       &kp X      &lt MOUSE C &kp V      &kp B         &kp N  &kp M      &lt MOUSE CMMA &kp DOT    &kp FSLH
                &lt ADJUST ESC &lt NUM SPC &lt SYM TAB             &lt FUNC RET  &mm_del_num
 			>;
 	};
@@ -198,9 +198,9 @@ ZMK_MOD_MORPH(mm_del_num,
 
         MOUSE {
             bindings = <
-	&trans      &trans     &trans   &trans &trans              &trans &trans  &trans   &trans     &trans
-	&trans      &trans     &trans   &trans &trans              &trans &trans  &trans   &trans     &trans
-	&mo HSCROLL &mo SCROLL &mo SLOW &trans &trans              &trans &trans  &mo SLOW &mo SCROLL &mo HSCROLL
+	&trans      &trans     &trans   &trans   &trans            &trans &trans   &trans &trans     &trans
+	&trans      &trans     &trans   &trans   &trans            &trans &trans   &trans &trans     &trans
+	&mo HSCROLL &mo SCROLL &trans   &mo SLOW &trans            &trans &mo SLOW &trans &mo SCROLL &mo HSCROLL
 	            &mkp MB3 &mkp MB1 &mkp MB2           &mkp MB2  &mkp MB1
             >;
         };
