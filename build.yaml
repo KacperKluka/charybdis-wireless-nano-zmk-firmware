@@ -19,19 +19,19 @@
 ---
 include:
   # QWERTY BT
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: charybdis_left
     keymap: qwerty
     format: bt
     artifact-name: charybdis_left
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: charybdis_right
     keymap: qwerty
     format: bt
     artifact-name: charybdis_right
 
   # Firmware Reset
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: settings_reset
     format: reset
     artifact-name: firmware_reset_nano_v2
